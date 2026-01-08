@@ -15,8 +15,8 @@ formulario.addEventListener('submit',(event)=>{
     nombre = document.getElementById('nobrePokemon').value;
     
     nombre.toLowerCase();
-   buscarPokemon(nombre);
-
+   //buscarPokemon(nombre);
+    buscarPokemon_Con_then_catch(nombre);
      
 });
 
@@ -27,7 +27,7 @@ botonAgregar.addEventListener('click',()=>{
     cargarColeccion(nombre,foto.src);
 });
 
-
+//FUNCIONES DE BUSQUEDA PARA LOS POKEMONS (ASINCRONA, PROMESAS Y JQUERY)
 
 async function buscarPokemon(pokemon){
     let datos = await fetch('https://pokeapi.co/api/v2/pokemon/'+pokemon);
@@ -36,6 +36,20 @@ async function buscarPokemon(pokemon){
     foto.src = datosParseados.sprites.front_default
     nombrePokemon.innerText = pokemon
 }
+
+
+function buscarPokemon_Con_then_catch(pokemon){
+    fetch('https://pokeapi.co/api/v2/pokemon/'+pokemon)
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+        foto.src = datos.sprites.front_default
+        nombrePokemon.innerText = pokemon}
+    );
+}
+
+
+
+
 
 function cargarColeccion(nombrePokemon,imagen){
     let div = document.createElement('div');
