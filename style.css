@@ -1,6 +1,7 @@
 body{
     background-color: black;
-    
+    color: white;
+    text-align: center;
 }
 
 form {
@@ -11,12 +12,14 @@ form {
     background-color: #8a2be2;
     border-radius: 10px;
     padding-top: 50px;
-    h2{
-        color: gold;
-    }
+    
 }
 
-#mostrar{
+h2{
+        color: gold;
+    }
+
+.divs{
     margin: auto;
     width: 400px;
     height: 250px;
@@ -24,4 +27,6 @@ form {
     background-color: #8a2be2;
     border-radius: 10px;
     color: white;
+    overflow: auto;
+    margin-top: 20px;
 }
