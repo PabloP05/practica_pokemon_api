@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+    
+}
+
+form {
+    margin: auto;
+    width: 400px;
+    height: 250px;
+    text-align: center;
+    background-color: #8a2be2;
+    border-radius: 10px;
+    padding-top: 50px;
+    h2{
+        color: gold;
+    }
+}
+
+#mostrar{
+    margin: auto;
+    width: 400px;
+    height: 250px;
+    text-align: center;
+    background-color: #8a2be2;
+    border-radius: 10px;
+    color: white;
+}
