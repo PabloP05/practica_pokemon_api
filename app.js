@@ -15,8 +15,9 @@ formulario.addEventListener('submit',(event)=>{
     nombre = document.getElementById('nobrePokemon').value;
     
     nombre.toLowerCase();
-   //buscarPokemon(nombre);
-    buscarPokemon_Con_then_catch(nombre);
+   //buscarPokemon(nombre); //version asincr
+    //buscarPokemon_Con_then_catch(nombre);
+    buscarPokemon_jQuery(nombre);
      
 });
 
@@ -47,7 +48,20 @@ function buscarPokemon_Con_then_catch(pokemon){
     );
 }
 
+function buscarPokemon_jQuery(pokemon){
+console.log('hola')
+    $.getJSON('https://pokeapi.co/api/v2/pokemon/' + pokemon,
+        (datos)=>{  // la funcion despues de la coma es la que se ejecuta cuando recibe el JSON 
+            foto.src = datos.sprites.front_default
+            nombrePokemon.innerText = pokemon
+        })
+        .fail(()=>{//si falla se llama con fail
+            console.log("Error al buscar el Pokémon")
+        });
+}
 
+
+//let a =  await fetch('https://pokeapi.co/api/v2/pokemon/'+pokemon);
 
 
 
