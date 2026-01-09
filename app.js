@@ -16,8 +16,8 @@ formulario.addEventListener('submit',(event)=>{
     
     nombre.toLowerCase();
    //buscarPokemon(nombre); //version asincr
-    //buscarPokemon_Con_then_catch(nombre);
-    buscarPokemon_jQuery(nombre);
+    buscarPokemon_Con_then_catch(nombre);
+    //buscarPokemon_jQuery(nombre);
      
 });
 
